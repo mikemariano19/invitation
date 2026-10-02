@@ -1,15 +1,15 @@
 import Hero from "./components/hero";
-import Section1 from "./components/section1";
-import Section2 from "./components/section2";
-import Venue from "./components/venue";
+import Reception from "./components/reception";
+import Gallery from "./components/gallery";
+import Event from "./components/event";
 
 
 export default function Home() {
   return (
-    <div className="container -z-50 min-h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth max-w-5xl mx-auto flex flex-col bg-gray-50">
+    <div className="container -z-50 min-h-screen max-w-5xl mx-auto flex flex-col bg-gray-50">
       <Hero />
-      <Section1 />
-      <Section2 />
-      <Venue />
+      <Event />
+      <Reception />
+      <Gallery />
     </div>
   )};

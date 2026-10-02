@@ -4,6 +4,7 @@ import {
   Geist,
   Cormorant_Garamond,
   Montserrat,
+  Great_Vibes,
 } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +23,12 @@ const montserrat = Montserrat({
   variable: "--font-body",
 });
 
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-accent",
+});
+
 export const metadata: Metadata = {
   title: "Christening Invitation",
   description: "A special day of love and blessings",
@@ -37,7 +44,8 @@ export default function RootLayout({
         "font-sans",
         geist.variable,
         cormorant.variable,
-        montserrat.variable
+        montserrat.variable,
+        greatVibes.variable
       )}
     >
       <body className="container -z-50 min-h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth max-w-5xl mx-auto flex flex-col bg-gray-50">
