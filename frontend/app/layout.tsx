@@ -48,7 +48,7 @@ export default function RootLayout({
         greatVibes.variable
       )}
     >
-      <body className="container -z-50 min-h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth max-w-5xl mx-auto flex flex-col bg-gray-50">
+      <body className="container min-h-screen  max-w-5xl mx-auto flex flex-col bg-gray-50">
         {children}
       </body>
     </html>

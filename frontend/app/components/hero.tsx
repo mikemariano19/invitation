@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
 
         {/* Decorative flowers */}
-        <div className="absolute -top-16 -left-16 text-[120px] opacity-10">
+        <div className="absolute -top-16 -left-16 text-[120px] opacity-10 pointer-events-none">
           🌸
         </div>
 
-        <div className="absolute -bottom-22 -right-10 text-[120px] opacity-10">
+        <div className="absolute -bottom-22 -right-10 text-[120px] opacity-10 pointer-events-none">
           🌸
         </div>
 
@@ -20,8 +20,8 @@ export default function Hero() {
         <div className="relative z-10 flex flex-col items-center text-center">
 
           {/* Small heading */}
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-[#a98691]">
-            A Little Blessing
+          <p className="font-body text-xs sm:text-xl tracking-[0.35em] uppercase text-[#a98691]">
+            Join us in celebrating the christening of our beloved daughter
           </p>
 
 
@@ -57,8 +57,8 @@ export default function Hero() {
           {/* Date */}
           <div className="mt-0">
 
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-[#a98691]">
-              Our Christening Day
+            <p className="font-body text-xs sm:text-xl tracking-[0.3em] uppercase text-[#a98691]">
+              On Christening Day and 1st Birthday Celebration
             </p>
 
             <p className="font-heading text-2xl sm:text-3xl mt-3 text-[#70535d]">

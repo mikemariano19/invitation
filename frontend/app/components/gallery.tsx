@@ -29,11 +29,11 @@ export default function Gallery() {
       <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
 
         {/* Decorative elements */}
-        <div className="absolute -top-24 -right-10 text-[120px] opacity-10">
+        <div className="absolute -top-24 -right-10 text-[120px] opacity-10 pointer-events-none">
           🌸
         </div>
 
-        <div className="absolute -bottom-22 -left-12 text-[120px] opacity-10">
+        <div className="absolute -bottom-22 -left-12 text-[120px] opacity-10 pointer-events-none">
           🌸
         </div>
 
@@ -41,7 +41,7 @@ export default function Gallery() {
         <div className="relative z-10 w-full max-w-2xl flex flex-col items-center text-center">
 
           {/* Heading */}
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-[#a98691]">
+          <p className="font-body text-xs sm:text-xl tracking-[0.35em] uppercase text-[#a98691]">
             Precious Moments
           </p>
 
@@ -80,7 +80,7 @@ export default function Gallery() {
             {/* Smaller Images */}
             <div className="grid grid-cols-2 gap-4 mt-6">
 
-              {images.slice(1).map((image, index) => (
+              {images.slice(1).map((image) => (
                 <div
                   key={image.src}
                   className="relative"
