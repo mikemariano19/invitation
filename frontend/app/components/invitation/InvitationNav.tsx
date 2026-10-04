@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const sections = [
-  { id: "hero", label: "Welcome", icon: "✦" },
+  { id: "welcome", label: "Welcome", icon: "✦" },
   { id: "event", label: "Event Details", icon: "♡" },
   { id: "for our guests", label: "For Our Guests", icon: "♡" },
   { id: "gallery", label: "Gallery", icon: "♡" },
