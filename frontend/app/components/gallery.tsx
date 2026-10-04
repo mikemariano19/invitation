@@ -25,8 +25,8 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
-      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
+    <section id="gallery" className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
+      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7]/90 text-[#6f5960] flex items-center justify-center px-6 py-16">
 
         {/* Decorative elements */}
         <div className="absolute -top-24 -right-10 text-[120px] opacity-10 pointer-events-none">

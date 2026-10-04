@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SafetyAndGifts() {
+export default function ForOurGuest() {
   const [showGiftModal, setShowGiftModal] = useState(false);
   const [giftMethod, setGiftMethod] = useState<"number" | "qr">("number");
   const [copied, setCopied] = useState(false);
@@ -21,16 +21,16 @@ export default function SafetyAndGifts() {
   };
 
   return (
-    <section className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
+    <section id="for our guests" className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
 
-      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
+      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7]/90 text-[#6f5960] flex items-center justify-center px-6 py-16">
 
         {/* Decorative elements */}
-        <div className="absolute -top-24 -right-12 text-[120px] opacity-10 pointer-events-none z-0">
+        <div className="absolute -top-24 -left-12 text-[120px] opacity-10 pointer-events-none z-0">
           🌸
         </div>
 
-        <div className="absolute -bottom-22 -left-12 text-[120px] opacity-10 pointer-events-none z-0">
+        <div className="absolute -bottom-22 -right-12 text-[120px] opacity-10 pointer-events-none z-0">
           🌸
         </div>
 
@@ -148,13 +148,6 @@ export default function SafetyAndGifts() {
                   <span className="text-[#c69aa8]">♡</span>
                   <p className="font-body text-sm leading-6">
                     Cetaphil Baby Gentle Wash
-                  </p>
-                </div>
-
-                <div className="flex gap-3">
-                  <span className="text-[#c69aa8]">♡</span>
-                  <p className="font-body text-sm leading-6">
-                    EQ Dry diapers (Large)
                   </p>
                 </div>
 

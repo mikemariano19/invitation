@@ -7,15 +7,15 @@ export default function Event() {
   "https://www.google.com/maps/dir//Diocesan+Shrine+of+Our+Lady+of+Solitude+of+Porta+Vaga+(San+Roque+Parish+Church),+P.+Burgos+Ave,+San+Roque,+Cavite/@14.4800883,120.8985765,17z/data=!4m17!1m7!3m6!1s0x3397cd342c9767d1:0x36118e1d5bc35282!2sDiocesan+Shrine+of+Our+Lady+of+Solitude+of+Porta+Vaga+(San+Roque+Parish+Church)!8m2!3d14.4800883!4d120.9011514!16s%2Fg%2F11bxfwr44z!4m8!1m0!1m5!1m1!1s0x3397cd342c9767d1:0x36118e1d5bc35282!2m2!1d120.901147!2d14.480305!3e0?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D";
 
   return (
-    <section className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
-      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
+    <section id="event" className="min-h-screen bg-[#eee9e6] px-0 flex justify-center snap-start snap-always">
+      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7]/90 text-[#6f5960] flex items-center justify-center px-6 py-16">
 
         {/* Decorative flowers */}
         <div className="absolute z-0 -top-17 -right-10 text-[120px] opacity-10 leading-none pointer-events-none">
           🌸
         </div>
 
-        <div className="absolute z-0 -bottom-22 -left-12 text-[120px] opacity-10 leading-none pointer-events-none">
+        <div className="absolute z-0 -bottom-17 -left-12 text-[120px] opacity-10 leading-none pointer-events-none">
           🌸
         </div>
 

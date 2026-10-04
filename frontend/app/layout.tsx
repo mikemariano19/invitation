@@ -7,6 +7,7 @@ import {
   Great_Vibes,
 } from "next/font/google";
 import { cn } from "@/lib/utils";
+import FallingPetals from "./components/FallingPetals";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -48,8 +49,10 @@ export default function RootLayout({
         greatVibes.variable
       )}
     >
-      <body className="container min-h-screen  max-w-5xl mx-auto flex flex-col bg-gray-50">
-        {children}
+      <body className="container min-h-screen  max-w-5xl mx-auto flex flex-col bg-gray-100">
+        <main className="relative z-20">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -1,11 +1,13 @@
 import Image from "next/image";
+import FallingPetals from "./FallingPetals";
 
-export default function Hero() {
+export default function Welcome() {
   const imagePath = "/images/baby11.jpg";
 
   return (
-    <section className="min-h-screen bg-[#eee9e6] px-0 flex justify-center">
-      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7] text-[#6f5960] flex items-center justify-center px-6 py-16">
+    <section id="welcome" className="min-h-screen bg-[#eee9e6] px-0 flex justify-center">
+      <div className="relative w-full max-w-5xl min-h-screen overflow-hidden bg-[#fffaf7]/90 text-[#6f5960] flex items-center justify-center px-6 py-16">
+      <FallingPetals />
 
         {/* Decorative flowers */}
         <div className="absolute -top-16 -left-16 text-[120px] opacity-10 pointer-events-none">
