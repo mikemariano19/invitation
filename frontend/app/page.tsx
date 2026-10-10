@@ -2,7 +2,7 @@ import Welcome from "./components/welcome";
 import Event from "./components/event";
 import ForOurGuest from "./components/forOurGuest";
 import Gallery from "./components/gallery";
-import Countdown from "./components/countdown";
+import End from "./components/end";
 import InvitationNav from "./components/invitation/InvitationNav";
 import FallingPetals from "./components/FallingPetals";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Event />
       <ForOurGuest />
       <Gallery />
-      <Countdown />
+      <End />
 
       <InvitationNav />
     </div>
