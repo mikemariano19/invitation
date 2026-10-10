@@ -30,46 +30,46 @@ const greatVibes = Great_Vibes({
   variable: "--font-accent",
 });
 
-// export const metadata: Metadata = {
-//   title: "Bianca Mariano | Christening Invitation",
-//   description:
-//     "Join us in celebrating Bianca Mariano's special christening day.",
-//   applicationName: "Bianca's Christening",
-//   icons: {
-//     icon: [
-//       { url: "/favicon.ico", sizes: "any" },
-//       { url: "/icon.png", type: "image/png" },
-//     ],
-//     apple: "/apple-icon.png",
-//   },
-//   appleWebApp: {
-//     capable: true,
-//     title: "Bianca's Christening",
-//     statusBarStyle: "default",
-//   },
-// };
-
-
 export const metadata: Metadata = {
   title: "Bianca Mariano | Christening Invitation",
-  description: "Join us for Bianca's special christening day.",
-
-  openGraph: {
-    title: "Bianca Mariano | Christening Invitation",
-    description: "A little blessing, a lifetime of love.",
-    url: "https://your-domain.com",
-    siteName: "Bianca's Christening",
-    images: [
-      {
-        url: "/images/bianca-preview.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Bianca Mariano Christening Invitation",
-      },
+  description:
+    "Join us in celebrating Bianca Mariano's special christening day.",
+  applicationName: "Bianca's Christening",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
     ],
-    type: "website",
+    apple: "/apple-icon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Bianca's Christening",
+    statusBarStyle: "default",
   },
 };
+
+
+// export const metadata: Metadata = {
+//   title: "Bianca Mariano | Christening Invitation",
+//   description: "Join us for Bianca's special christening day.",
+
+//   openGraph: {
+//     title: "Bianca Mariano | Christening Invitation",
+//     description: "A little blessing, a lifetime of love.",
+//     url: "https://your-domain.com",
+//     siteName: "Bianca's Christening",
+//     images: [
+//       {
+//         url: "/images/bianca-preview.jpg",
+//         width: 1200,
+//         height: 630,
+//         alt: "Bianca Mariano Christening Invitation",
+//       },
+//     ],
+//     type: "website",
+//   },
+// };
 
 
 export const viewport: Viewport = {
