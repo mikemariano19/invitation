@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import {
   Geist,
@@ -7,7 +7,7 @@ import {
   Great_Vibes,
 } from "next/font/google";
 import { cn } from "@/lib/utils";
-import FallingPetals from "./components/FallingPetals";
+
 
 const geist = Geist({
   subsets: ["latin"],
@@ -30,9 +30,50 @@ const greatVibes = Great_Vibes({
   variable: "--font-accent",
 });
 
+// export const metadata: Metadata = {
+//   title: "Bianca Mariano | Christening Invitation",
+//   description:
+//     "Join us in celebrating Bianca Mariano's special christening day.",
+//   applicationName: "Bianca's Christening",
+//   icons: {
+//     icon: [
+//       { url: "/favicon.ico", sizes: "any" },
+//       { url: "/icon.png", type: "image/png" },
+//     ],
+//     apple: "/apple-icon.png",
+//   },
+//   appleWebApp: {
+//     capable: true,
+//     title: "Bianca's Christening",
+//     statusBarStyle: "default",
+//   },
+// };
+
+
 export const metadata: Metadata = {
-  title: "Christening Invitation",
-  description: "A special day of love and blessings",
+  title: "Bianca Mariano | Christening Invitation",
+  description: "Join us for Bianca's special christening day.",
+
+  openGraph: {
+    title: "Bianca Mariano | Christening Invitation",
+    description: "A little blessing, a lifetime of love.",
+    url: "https://your-domain.com",
+    siteName: "Bianca's Christening",
+    images: [
+      {
+        url: "/images/bianca-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bianca Mariano Christening Invitation",
+      },
+    ],
+    type: "website",
+  },
+};
+
+
+export const viewport: Viewport = {
+  themeColor: "#fffaf7",
 };
 
 export default function RootLayout({

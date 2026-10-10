@@ -90,11 +90,10 @@ export default function Event() {
                 </div>
 
                 <p className="font-body text-sm leading-loose text-[#70535d]">
-                  P. Burgos St.
+                  P. Burgos Ave.
                   <br />
-                  Sta. Cruz, Cavite City
+                  San Roque, Cavite City
                 </p>
-
                  {/* Directions */}
                 <a
                   href={churchMapsUrl}

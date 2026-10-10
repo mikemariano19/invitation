@@ -1,31 +1,28 @@
 "use client";
 
 const petals = [
-  { left: 3, delay: 0, duration: 19, size: 16, drift: 35, rotate: 20, opacity: 0.32 },
-  { left: 9, delay: -7, duration: 24, size: 11, drift: -45, rotate: 80, opacity: 0.25 },
-  { left: 16, delay: -14, duration: 21, size: 14, drift: 55, rotate: 140, opacity: 0.28 },
-  { left: 24, delay: -4, duration: 27, size: 10, drift: -35, rotate: 210, opacity: 0.23 },
-  { left: 31, delay: -11, duration: 22, size: 17, drift: 45, rotate: 40, opacity: 0.30 },
-  { left: 39, delay: -18, duration: 25, size: 12, drift: -55, rotate: 120, opacity: 0.24 },
-  { left: 47, delay: -5, duration: 20, size: 15, drift: 40, rotate: 260, opacity: 0.27 },
-  { left: 55, delay: -13, duration: 28, size: 10, drift: -45, rotate: 180, opacity: 0.22 },
-  { left: 63, delay: -2, duration: 23, size: 16, drift: 50, rotate: 310, opacity: 0.29 },
-  { left: 70, delay: -9, duration: 21, size: 11, drift: -40, rotate: 90, opacity: 0.25 },
-  { left: 77, delay: -16, duration: 26, size: 14, drift: 45, rotate: 230, opacity: 0.27 },
-  { left: 84, delay: -6, duration: 20, size: 10, drift: -50, rotate: 150, opacity: 0.23 },
-  { left: 92, delay: -12, duration: 24, size: 15, drift: 35, rotate: 280, opacity: 0.30 },
+  { left: 3, duration: 18, size: 16, drift: 35, rotate: 20, opacity: 0.32 },
+  { left: 9, duration: 23, size: 11, drift: -45, rotate: 80, opacity: 0.25 },
+  { left: 16, duration: 20, size: 14, drift: 55, rotate: 140, opacity: 0.28 },
+  { left: 24, duration: 25, size: 10, drift: -35, rotate: 210, opacity: 0.23 },
+  { left: 31, duration: 21, size: 17, drift: 45, rotate: 40, opacity: 0.30 },
+  { left: 39, duration: 24, size: 12, drift: -55, rotate: 120, opacity: 0.24 },
+  { left: 47, duration: 19, size: 15, drift: 40, rotate: 260, opacity: 0.27 },
+  { left: 55, duration: 27, size: 10, drift: -45, rotate: 180, opacity: 0.22 },
+  { left: 63, duration: 22, size: 16, drift: 50, rotate: 310, opacity: 0.29 },
+  { left: 70, duration: 20, size: 11, drift: -40, rotate: 90, opacity: 0.25 },
+  { left: 77, duration: 25, size: 14, drift: 45, rotate: 230, opacity: 0.27 },
+  { left: 84, duration: 19, size: 10, drift: -50, rotate: 150, opacity: 0.23 },
+  { left: 92, duration: 23, size: 15, drift: 35, rotate: 280, opacity: 0.30 },
 
-  // Additional petals
-  { left: 13, delay: -20, duration: 29, size: 9, drift: -40, rotate: 60, opacity: 0.21 },
-  { left: 44, delay: -8, duration: 22, size: 13, drift: 55, rotate: 200, opacity: 0.26 },
-  { left: 68, delay: -17, duration: 25, size: 9, drift: -35, rotate: 330, opacity: 0.24 },
-  { left: 88, delay: -21, duration: 27, size: 12, drift: 50, rotate: 110, opacity: 0.28 },
-
-  // More petals so the screen never feels empty
-  { left: 20, delay: -3, duration: 23, size: 12, drift: 40, rotate: 170, opacity: 0.23 },
-  { left: 36, delay: -15, duration: 26, size: 10, drift: -45, rotate: 250, opacity: 0.25 },
-  { left: 59, delay: -10, duration: 24, size: 13, drift: 35, rotate: 70, opacity: 0.24 },
-  { left: 81, delay: -19, duration: 22, size: 11, drift: -50, rotate: 300, opacity: 0.25 },
+  { left: 13, duration: 28, size: 9, drift: -40, rotate: 60, opacity: 0.21 },
+  { left: 20, duration: 22, size: 12, drift: 40, rotate: 170, opacity: 0.23 },
+  { left: 36, duration: 25, size: 10, drift: -45, rotate: 250, opacity: 0.25 },
+  { left: 44, duration: 21, size: 13, drift: 55, rotate: 200, opacity: 0.26 },
+  { left: 59, duration: 23, size: 13, drift: 35, rotate: 70, opacity: 0.24 },
+  { left: 68, duration: 24, size: 9, drift: -35, rotate: 330, opacity: 0.24 },
+  { left: 81, duration: 21, size: 11, drift: -50, rotate: 300, opacity: 0.25 },
+  { left: 88, duration: 26, size: 12, drift: 50, rotate: 110, opacity: 0.28 },
 ];
 
 export default function FallingPetals() {
@@ -43,12 +40,17 @@ export default function FallingPetals() {
             width: `${petal.size}px`,
             height: `${petal.size * 1.45}px`,
             opacity: petal.opacity,
+
             animationName: "petalFall",
             animationDuration: `${petal.duration}s`,
             animationTimingFunction: "linear",
             animationIterationCount: "infinite",
-            animationDelay: `${petal.delay}s`,
-            animationFillMode: "both",
+
+            // IMPORTANT:
+            // No negative animationDelay.
+            // Every petal starts immediately after refresh.
+            animationDelay: "0s",
+
             ["--drift" as string]: `${petal.drift}px`,
             ["--rotation" as string]: `${petal.rotate}deg`,
           }}
@@ -76,13 +78,7 @@ export default function FallingPetals() {
             </defs>
 
             <path
-              d="
-                M12 1
-                C8 5 3 8 3 15
-                C3 23 8 30 12 33
-                C16 30 21 23 21 15
-                C21 8 16 5 12 1Z
-              "
+              d="M12 1 C8 5 3 8 3 15 C3 23 8 30 12 33 C16 30 21 23 21 15 C21 8 16 5 12 1Z"
               fill={`url(#petalGradient-${index})`}
             />
 
@@ -100,14 +96,12 @@ export default function FallingPetals() {
       <style jsx>{`
         @keyframes petalFall {
           0% {
-            transform:
-              translate3d(0, -60px, 0)
+            transform: translate3d(0, -60px, 0)
               rotate(var(--rotation));
           }
 
           20% {
-            transform:
-              translate3d(
+            transform: translate3d(
                 var(--drift),
                 20vh,
                 0
@@ -116,8 +110,7 @@ export default function FallingPetals() {
           }
 
           40% {
-            transform:
-              translate3d(
+            transform: translate3d(
                 calc(var(--drift) * -0.7),
                 40vh,
                 0
@@ -126,8 +119,7 @@ export default function FallingPetals() {
           }
 
           60% {
-            transform:
-              translate3d(
+            transform: translate3d(
                 calc(var(--drift) * 0.8),
                 60vh,
                 0
@@ -136,8 +128,7 @@ export default function FallingPetals() {
           }
 
           80% {
-            transform:
-              translate3d(
+            transform: translate3d(
                 calc(var(--drift) * -0.5),
                 80vh,
                 0
@@ -146,12 +137,7 @@ export default function FallingPetals() {
           }
 
           100% {
-            transform:
-              translate3d(
-                0,
-                110vh,
-                0
-              )
+            transform: translate3d(0, 110vh, 0)
               rotate(calc(var(--rotation) + 360deg));
           }
         }

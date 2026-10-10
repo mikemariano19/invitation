@@ -2,7 +2,7 @@ import Image from "next/image";
 import FallingPetals from "./FallingPetals";
 
 export default function Welcome() {
-  const imagePath = "/images/baby11.jpg";
+  const imagePath = "/images/profile.png";
 
   return (
     <section id="welcome" className="min-h-screen bg-[#eee9e6] px-0 flex justify-center">
@@ -45,7 +45,7 @@ export default function Welcome() {
                 alt="Bianca Mariano"
                 fill
                 priority
-                className="object-cover"
+                className="w-full h-full object-cover scale-115 object-[50%_-15%] translate-x-4"
                 sizes="(max-width: 640px) 240px, 288px"
               />
             </div>
