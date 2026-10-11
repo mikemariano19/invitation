@@ -52,22 +52,24 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   title: "Bianca Mariano | Christening Invitation",
-  description: "Join us for Bianca's special christening day.",
-
+  description: "A little blessing, a lifetime of love.",
+  metadataBase: new URL(
+    "https://bianca-invitation.netlify.app"
+  ),
   openGraph: {
     title: "Bianca Mariano | Christening Invitation",
     description: "A little blessing, a lifetime of love.",
     url: "https://bianca-invitation.netlify.app/",
-    siteName: "Bianca's Christening",
+    siteName: "Bianca Mariano",
+    type: "website",
     images: [
       {
-        url: "/images/profile.png",
+        url: "/images/icon.jpg",
         width: 1200,
         height: 630,
         alt: "Bianca Mariano Christening Invitation",
       },
     ],
-    type: "website",
   },
 };
 
