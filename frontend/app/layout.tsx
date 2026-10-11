@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bianca Mariano | Christening Invitation",
     description: "A little blessing, a lifetime of love.",
-    url: "https://bianca-invitation.netlify.app/",
+    url: "https://bianca-invitation.netlify.app",
     siteName: "Bianca Mariano",
     type: "website",
     images: [
